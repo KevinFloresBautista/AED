@@ -31,6 +31,9 @@ int main(){
     //Prueba de Assert con Tipo de Dato Double
     assert (1.0 == 1.0);
     assert (1 == 1.0);
+    assert (2 == 1.0 + 1); //Promocion de numeros
+    assert ( 0.0 == 0.0f); //0.0f es el 0 en tipo de dato Float
+    assert ( 0.0 == 0e1); //Notacion Cientifica 
     assert (2.0 == 1.0 + 1.0);
     assert (2.0 == 3.0 - 1.0);
     assert (2.0 != 4.0 - 1.0);
@@ -47,6 +50,9 @@ int main(){
 
     // Prueba con Tipo de Dato Char // Operacion con la Tabla de ASCII
     assert ('a' == 'a'); // a=97
+    assert ( 'a' == 97);
+    assert ( 'b' == 'a' + 1);
+    assert ( 'A' != 'a');
     assert ('*' != '+'); // * = 42 , + = 43
     assert ('b' > 'a'); // b = 98 , a = 97  entonces  98>97
     assert ('a' < 'z'); // a = 97 , z = 122 entonces 97<122
@@ -70,22 +76,23 @@ int main(){
     assert (10%-3 != 3); //resto de 10%-3 es : 1
     assert (5*4 + 120/4 - 50%30 != -100); // 30 != -100
 
-    //Prueba con Tipo de Dato Unsigned
-    assert (4 == 4);
-    assert (5 != 9);
-    assert (1 <= 64);
-    assert (1000 >= 100);
-    assert (4 * 10 != 50);
-    assert (10 + 50 == 60);
-    assert (10 - 10 == 0);
-    assert (40/40 == 1);
-    assert (100%55 == 45 );
+    //Prueba con Tipo de Dato Unsigned // Agregar u para saber que estamos usando el tipo de dato Unsigned
+    assert (4u == 4u);
+    assert (5u != 9u);
+    assert (1u <= 64u);
+    assert (1000u >= 100u);
+    assert (4u * 10u != 50u);
+    assert (10u + 50u == 60u);
+    assert (10u - 10u == 0u);
+    assert (40u/40u == 1u);
+    assert (100u%55u == 45u );
 
     //Prueba con Tipo de Dato String   // Se Agrega la letra "s" porque si no estamos usando cadenas de C
 
     assert ("KEVIN"s == "KEVIN"s ); 
     assert ("Kevin"s != "Flores"s);
     assert ("k"s + "e"s + "v"s + "i"s +"n"s == "kevin"s);
+    assert ( "aba"s > "aab");
     assert ("kevin"s != "KEVIN"s);
     assert ("Kevin"s.length() == 5);
     assert("Kevin"s=="Ke"s+"vin"s);
